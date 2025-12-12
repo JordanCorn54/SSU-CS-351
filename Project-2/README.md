@@ -4,6 +4,7 @@
 1. For the graph, note the shape of the curve. Does it “converge” to some general value?
 What’s the maximum speedup you got from threading? What happens when you use more cores than are available in the hardware?  
 
+![threaded.out speedup vs. threads](threadedGraph.png)
 The graph converges around 20 once it reaches 42 threads. When the program uses more cores than available, the speedup begins to fluctuate before dropping a little at the end.  
 
 2. Considering the number of cores in the system, do you get a linear scaling of performance as you add more cores?  
@@ -28,4 +29,5 @@ Each iteration of the mean computation requires 4 bytes of data due to data used
 ## "Computing a Volume" Questions:
 1. Do you get similar performance curve to threaded.out?
 
+![sdf.out speedup vs. threads](sdfGraph.png)
 The performance curve is different, increasing somewhat linearly until dropping sharply after 72 threads.
